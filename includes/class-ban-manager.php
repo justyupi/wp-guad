@@ -1,13 +1,13 @@
 <?php
 if (!defined('ABSPATH')) exit;
 
-if (!class_exists('WPGP_Ban_Manager')) {
-    class WPGP_Ban_Manager {
+if (!class_exists('SG_Ban_Manager')) {
+    class SG_Ban_Manager {
         private $table;
 
         public function __construct() {
             global $wpdb;
-            $this->table = $wpdb->prefix . 'wpgp_bans';
+            $this->table = $wpdb->prefix . 'sg_bans';
         }
 
         public function ban_ip($ip, $hours = 1, $reason = 'too_many_failures'){
